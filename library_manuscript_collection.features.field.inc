@@ -376,7 +376,7 @@ function library_manuscript_collection_field_default_fields() {
           'day' => 0,
           'hour' => 0,
           'minute' => 0,
-          'month' => 'month',
+          'month' => 0,
           'second' => 0,
           'year' => 'year',
         ),

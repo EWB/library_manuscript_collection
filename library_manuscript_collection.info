@@ -2,6 +2,7 @@ name = Library Manuscript Collection
 description = A feature for library manuscript collections
 core = 7.x
 package = Features
+php = 5.2.4
 version = 7.x-1.0-beta1
 project = library_manuscript_collection
 dependencies[] = ctools
