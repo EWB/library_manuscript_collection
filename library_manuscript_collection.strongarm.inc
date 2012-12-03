@@ -93,7 +93,10 @@ function library_manuscript_collection_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '11',
+        ),
+        'path' => array(
+          'weight' => '12',
         ),
       ),
       'display' => array(),
@@ -123,6 +126,7 @@ function library_manuscript_collection_strongarm() {
   $strongarm->name = 'node_options_library_manuscript_collection';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_library_manuscript_collection'] = $strongarm;
 

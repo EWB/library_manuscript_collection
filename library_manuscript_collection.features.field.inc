@@ -84,21 +84,25 @@ function library_manuscript_collection_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-library_manuscript_collection-field_manuscript_col_length'.
-  $fields['node-library_manuscript_collection-field_manuscript_col_length'] = array(
+  // Exported field: 'node-library_manuscript_collection-field_manuscript_coll_length'.
+  $fields['node-library_manuscript_collection-field_manuscript_coll_length'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_manuscript_col_length',
+      'field_name' => 'field_manuscript_coll_length',
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
       'module' => 'number',
-      'settings' => array(),
+      'settings' => array(
+        'decimal_separator' => '.',
+        'precision' => '10',
+        'scale' => '2',
+      ),
       'translatable' => '0',
-      'type' => 'number_integer',
+      'type' => 'number_decimal',
     ),
     'field_instance' => array(
       'bundle' => 'library_manuscript_collection',
@@ -112,11 +116,11 @@ function library_manuscript_collection_field_default_fields() {
           'settings' => array(
             'decimal_separator' => '.',
             'prefix_suffix' => TRUE,
-            'scale' => 0,
+            'scale' => 2,
             'thousand_separator' => ' ',
           ),
-          'type' => 'number_integer',
-          'weight' => '6',
+          'type' => 'number_decimal',
+          'weight' => 10,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -126,7 +130,7 @@ function library_manuscript_collection_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_manuscript_col_length',
+      'field_name' => 'field_manuscript_coll_length',
       'label' => 'Collection Length',
       'required' => 0,
       'settings' => array(
@@ -204,6 +208,79 @@ function library_manuscript_collection_field_default_fields() {
         'settings' => array(),
         'type' => 'number',
         'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-library_manuscript_collection-field_manuscript_finding_aid'.
+  $fields['node-library_manuscript_collection-field_manuscript_finding_aid'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_manuscript_finding_aid',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 1,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'library_manuscript_collection',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 9,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_manuscript_finding_aid',
+      'label' => 'Finding Aid',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 1,
+        'file_directory' => 'finding-aids',
+        'file_extensions' => 'pdf',
+        'max_filesize' => '4 MB',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
+        'weight' => '10',
       ),
     ),
   );
@@ -419,8 +496,8 @@ function library_manuscript_collection_field_default_fields() {
       'label' => 'Period',
       'required' => 0,
       'settings' => array(
-        'default_value' => 'now',
-        'default_value2' => 'same',
+        'default_value' => 'blank',
+        'default_value2' => 'blank',
         'default_value_code' => '',
         'default_value_code2' => '',
         'user_register_form' => FALSE,
@@ -674,6 +751,7 @@ function library_manuscript_collection_field_default_fields() {
   t('Collection Length');
   t('Collection Number');
   t('Description');
+  t('Finding Aid');
   t('Geographic Coverage');
   t('Image');
   t('Period');
