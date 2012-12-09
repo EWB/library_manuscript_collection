@@ -415,7 +415,7 @@ function library_manuscript_collection_field_default_fields() {
         'default_image' => 0,
         'file_directory' => 'manuscript_collections',
         'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '2 MB',
+        'max_filesize' => '3 MB',
         'max_resolution' => '',
         'min_resolution' => '',
         'title_field' => 1,
