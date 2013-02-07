@@ -442,7 +442,7 @@ function library_manuscript_collection_field_default_fields() {
   $fields['node-library_manuscript_collection-field_manuscript_image'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_manuscript_image',
@@ -491,11 +491,11 @@ function library_manuscript_collection_field_default_fields() {
             'colorbox_caption_custom' => '',
             'colorbox_gallery' => 'post',
             'colorbox_gallery_custom' => '',
-            'colorbox_image_style' => 'large',
+            'colorbox_image_style' => 'jumbo',
             'colorbox_node_style' => 'medium',
           ),
           'type' => 'colorbox',
-          'weight' => '10',
+          'weight' => '11',
         ),
         'search_result' => array(
           'label' => 'hidden',
