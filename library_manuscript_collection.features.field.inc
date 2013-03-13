@@ -57,7 +57,7 @@ function library_manuscript_collection_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'search_result' => array(
           'label' => 'hidden',
@@ -492,10 +492,11 @@ function library_manuscript_collection_field_default_fields() {
             'colorbox_gallery' => 'post',
             'colorbox_gallery_custom' => '',
             'colorbox_image_style' => 'jumbo',
+            'colorbox_multivalue_index' => NULL,
             'colorbox_node_style' => 'medium',
           ),
           'type' => 'colorbox',
-          'weight' => '11',
+          'weight' => '9',
         ),
         'search_result' => array(
           'label' => 'hidden',
