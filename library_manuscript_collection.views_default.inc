@@ -250,7 +250,7 @@ Voice: (315) 229-5956 e-mail: phaggett@stlawu.edu</p>';
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'Special Collections is the place in the general library where we keep any items that are scarce, fragile, or valuable.  Holdings include: printed books, journals, newspapers, maps, atlases, photographs, reports, diaries, correspondence, and more...
+  $handler->display->display_options['header']['area']['content'] = '<a href="special-collections">Special Collections</a> is the place in the general library where we keep any items that are scarce, fragile, or valuable.  Holdings include: printed books, journals, newspapers, maps, atlases, photographs, reports, diaries, correspondence, and more...
 
 ';
   $handler->display->display_options['header']['area']['format'] = 'richtext_editor';
