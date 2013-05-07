@@ -63,10 +63,10 @@ function library_manuscript_collection_field_default_fields() {
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
-            'trim_length' => '300',
+            'trim_length' => '400',
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -232,15 +232,9 @@ function library_manuscript_collection_field_default_fields() {
         ),
         'search_result' => array(
           'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 0,
-            'thousand_separator' => ' ',
-          ),
-          'type' => 'number_integer',
-          'weight' => '0',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -506,7 +500,7 @@ function library_manuscript_collection_field_default_fields() {
             'image_style' => 'thumbnail',
           ),
           'type' => 'image',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
